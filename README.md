@@ -65,7 +65,7 @@ Road maps 0 and 1 use layouts observed during training; road maps 600 and 601 us
 
 ### Video frame processing
 
-[`video_frame_tools.py`](video_frame_tools.py) combines both video-processing operations in one command-line tool. It supports a single video file or recursively scans a directory, preserves the input frame count and rate, and writes to a separate output path by default.
+[`video_frame_tools.py`](video_frame_tools.py) provides selectable modes for filtering sudden brightest-point jumps, interpolating duplicate frames, or applying both operations in sequence. It supports a single video file or recursively scans a directory, preserves the input frame count and rate, and writes to a separate output path by default.
 
 The tool requires Python, OpenCV, and NumPy:
 
@@ -168,7 +168,7 @@ TimeRadioMap 使用 ControlRadio，以连续时间步的道路地图作为条件
 
 ### 视频帧处理工具
 
-仓库中的 [`video_frame_tools.py`](video_frame_tools.py) 将突变帧筛选和重复帧插值合并为一个脚本。支持处理单个视频或递归扫描目录，并保持输入视频的帧数和帧率；默认写入单独的输出路径。
+仓库提供 [`video_frame_tools.py`](video_frame_tools.py)，可根据需要选择最亮点突变筛选、重复帧插值，或依次执行这两种处理。脚本支持处理单个视频或递归扫描目录，并保持输入视频的帧数和帧率；默认将结果写入单独的输出路径。
 
 工具依赖 Python、OpenCV 和 NumPy：
 
